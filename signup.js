@@ -4,3 +4,5 @@ registrationForm.addEventListener("submit", function(e){
     // alert(document.getElementsByName("first_name")[0].value + " " + document.getElementsByName("last_name")[0].value);
     window.location.href = "checkout.html?firstname=" + document.getElementsByName("first_name")[0].value + "&lastname=" + document.getElementsByName("last_name")[0].value;
 });
+
+const lastNameInput = document.getElementsByName("last_name")[0];const remainCharSpan = document.getElementById("charCount");
