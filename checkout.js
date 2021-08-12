@@ -28,16 +28,25 @@ document.getElementById("customer-form").addEventListener("submit", function(e){
 
     const product = new Product(name.value, price.value, quantity.value);
     const display = new Display();
-
+    console.log(product);
     // display.clearFields();
-    display.showLoading();
+    display.showLoading(product);
 
 });
 
-Display.prototype.showLoading = function(){
+Display.prototype.showLoading = function(product){
     const loading = document.querySelector(".loading");
     loading.style.display = "block";
+    console.log("showloading's this");
+    console.log(this);
+
+    const displayObj = this;
+    setTimeout(function(){
+        loading.style.display = "none";
+        // displayObj.addProduct(product);
+    }, 3000);
 }
+
 
 
 
