@@ -68,7 +68,7 @@ Display.prototype.addProduct = function(product){
         Remove
       </button>
     </div>
-    <div class="product-line-price">${parseFloat(product.price) * parseFloat(product.quantity)}</div>
+    <div class="product-line-price">${(parseFloat(product.price) * parseFloat(product.quantity)).toFixed(2)}</div>
       </div>`;
 }
 
